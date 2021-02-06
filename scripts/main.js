@@ -7,7 +7,7 @@ if( x<=100 && x>=67){
     document.getElementById("volume-image").src="./assets/media/icons/volume-level-3.svg";
 }else if (x>=34 && x<=66){
     document.getElementById("volume-image").src="./assets/media/icons/volume-level-2.svg";
-}else if(x>=1 &&x<=33){
+}else if(x>=1 && x<=33){
     document.getElementById("volume-image").src="./assets/media/icons/volume-level-1.svg";
 }else{
     document.getElementById("volume-image").src="./assets/media/icons/volume-level-0.svg";
@@ -17,13 +17,13 @@ if( x<=100 && x>=67){
 
 function hornSound(){
     var x= document.getElementById("horn-sound");
-    x.play();
-    
-    }
+    x.play();    
+}
 
-    document.getElementById("honk-btn").addEventListener("click",hornSound);
+document.getElementById("honk-btn").addEventListener("click",hornSound);
 
-    /*
+
+
 document.getElementById("volume-number").addEventListener("change",function(event){
   
     value = event.target.value;
@@ -33,10 +33,11 @@ document.getElementById("volume-number").addEventListener("change",function(even
   vol.volume = value*0.01;
    
     adjustVolumnIcon(value);
-   
-   
+
+    document.getElementById("honk-btn").addEventListener("click",hornSound);
 
 });
+
 
 
 document.getElementById("volume-slider").addEventListener("input",function (event){
@@ -52,9 +53,7 @@ document.getElementById("volume-slider").addEventListener("input",function (even
 
     adjustVolumnIcon(value);
 
-   
     document.getElementById("honk-btn").addEventListener("click",hornSound);
-
  });
 
 
@@ -65,6 +64,8 @@ document.getElementById("volume-slider").addEventListener("input",function (even
 
     document.getElementById("horn-sound").src="./assets/media/audio/air-horn.mp3";
     
+    document.getElementById("honk-btn").addEventListener("click",hornSound);
+    
 });
 
 document.getElementById("radio-car-horn").addEventListener("click",function (){
@@ -73,7 +74,10 @@ document.getElementById("radio-car-horn").addEventListener("click",function (){
 
     document.getElementById("horn-sound").src="./assets/media/audio/car-horn.mp3";
 
+    document.getElementById("honk-btn").addEventListener("click",hornSound);
+
 });
+    
 
 document.getElementById("radio-party-horn").addEventListener("click",function (){
 
@@ -81,9 +85,10 @@ document.getElementById("radio-party-horn").addEventListener("click",function ()
 
     document.getElementById("horn-sound").src="./assets/media/audio/party-horn.mp3";
 
-    
-    
-});
-*/
+    document.getElementById("honk-btn").addEventListener("click",hornSound);
 
-// TODO
+});
+
+
+
+
